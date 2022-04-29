@@ -26,6 +26,11 @@ try {
 	
 	
 ?>
+
+	<a href="../Exercises/exersiseone.html" target="_blank">ExerciseOne</a>
+
+	<a href="../Exercises/exercisetwo.html" target="_blank">ExerciseTwo</a>
+	
     <h1>Search through DB</h1>
     <form action="fnPHP.php" method="post" role="search" id="form"> 
         <input type="search" id="fnQuery" name="fnQuery"

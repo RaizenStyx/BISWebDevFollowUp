@@ -52,7 +52,7 @@
 		button.single:hover{
 			cursor: pointer;
 		}
-
+		
         svg {
             color: #fff;
             fill: currentColor;
@@ -60,4 +60,15 @@
             height: 24px;
             padding: 10px;
         }
+		a:link, a:visited {
+			background-color: #3745c2;
+			color: white;
+			padding: 14px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+		}
+		a:hover, a:active {
+			background-color: #3745c2;
+		}
 		

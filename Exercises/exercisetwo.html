@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise  Two</title>
+    <style>
+        h1 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: xx-large;
+        }
+        h2 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: xx-large;
+        }
+        button {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            justify-content: center;
+            height: 100px;
+            width: 200px;
+        }
+        button:active{
+            background-color: aqua;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        p {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: x-large;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>The JavaScript Lottery</h1>
+    <h2>Click the button to draw a number</h2>
+    <div>
+        <button onclick = "test()">Let's Play!</button>
+    </div>
+    <h2 id = "num" > Your Number: 0 </h2>
+
+    <b><p>* Any number in the 1 to 1000 range wins!</p></b>
+
+    <script>
+        var counter = 1;
+        var randomNum = Math.ceil(Math.random() * 100000);
+
+        async function test() {
+            await randomNumberGen();
+
+            setTimeout(() => {
+                if (randomNum < 1000) {
+                alert("You Win!");
+            }
+            else {
+                alert("You Lose!");
+            }
+
+            }, 10000)
+            
+        }
+
+         
+        function randomNumberGen() {
+            return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                document.getElementById("num").innerHTML = "Your Number: " + randomNum;
+                counter++;
+                randomNum = Math.ceil(Math.random() * 100000) 
+                if (counter < 10){
+                    randomNumberGen()
+                };
+                resolve();
+            }, 1000);
+            });
+        }
+        
+
+        
+        
+    </script>
+</body>
+</html>

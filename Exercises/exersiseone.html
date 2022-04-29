@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exersice One</title>
+    <style>
+        div.main {
+            position: fixed;
+            top: 1%;
+            left: 1%;
+            bottom: 1%;
+            right: 1%;
+            overflow: auto;
+            border: 2.5px solid black;
+        }
+        div.one {
+            position: fixed;
+            top: 1%;
+            left: 1%;
+            bottom: 1%;
+            right: 66%;
+            border: 1px solid black;
+            text-align: center;
+            padding: 23% 0;
+            font-size: xx-large;
+            background-color: blue;
+            color: white;
+        }
+        div.two{
+            position: fixed;
+            top: 1%;
+            left: 34%;
+            bottom: 1%;
+            right: 33%;
+            border: 1px solid black;
+            font-size: xx-large;
+            text-align: center;
+            padding: 23% 0;
+            
+        }
+        div.three {
+            position: fixed;
+            top: 1%;
+            left: 67%;
+            bottom: 1%;
+            right: 1%;
+            border: 1px solid black;
+            text-align: center;
+            font-size: xx-large;
+            padding: 23% 0;
+            background-color: blue;
+        
+        }
+        h1.twoH1 {
+            animation:spin 2.65s linear infinite;
+            
+        }
+        @keyframes spin { 
+            100% {transform:rotate(360deg); } 
+        }
+
+        h1.threeH1 {
+            color: black;
+            animation: marquee 2s linear infinite;
+            
+        }
+        
+        @keyframes marquee {
+            from {transform: translateY(0%); }
+            to {transform: translateY(500%); }
+            
+        }
+       
+      
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id = "one" class="one"><h1>ONE</h1></div>
+        <div class="two"><h1 class="twoH1">TWO</h1></div>
+        <div class ="three"><h1 id="threeH1" class = "threeH1">THREE</h1></div>
+    </div>
+
+    
+<script>
+
+    function startPage(){
+        div1Start();
+        div3Start();
+    }
+    function div1Change(){
+        const div1 = document.getElementById("one");
+
+        if (div1.style.color == "white") {
+            div1.style.color = "black"
+            div1.style.backgroundColor = "yellow"
+            div1.style.transition = "2s"
+            
+        } else {
+            div1.style.color = "white"
+            div1.style.backgroundColor = "blue"
+            div1.style.transition = "2s"
+            
+        }
+    }
+    function div1Start(){
+        div1Change();
+        window.setInterval(div1Change, 2500);
+    }
+
+
+    function threeH1Change(){
+        const div3 = document.getElementById("threeH1")
+
+        if (div3.style.color == "white") {
+            div3.style.color = "black"
+            div3.style.transition = "2s"
+            
+        } else {
+            div3.style.color = "white"
+            div3.style.transition = "2s"
+        }
+       
+    }
+    function div3Start(){
+        threeH1Change();
+        window.setInterval(threeH1Change, 2500);
+    }
+    
+
+    window.onload = startPage()
+
+</script>
+
+</body>
+
+</html>
