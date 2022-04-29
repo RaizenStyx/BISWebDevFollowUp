@@ -68,9 +68,9 @@ class FizzBuzz
 	
 	function get($limit)
 	{
-		if(int($limit) == $limit) {
-			
 		
+		if(intval($limit) == $limit) {
+			
 			for ($i = 1; $i <= $limit; $i++) {
 			$isFizz = (0 === $i % 3);
 			$isBuzz = (0 === $i % 5);
@@ -103,12 +103,12 @@ class FizzBuzz
 
 			echo PHP_EOL;
 			
-		} else {
-			print "not a number";
+			}
+		}else {
+			print "Not a whole number.";
 		}
+				
 		
-}
-
 		
 	}
 }
