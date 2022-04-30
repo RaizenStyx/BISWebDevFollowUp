@@ -17,6 +17,9 @@
  $MaxChar->get($string);
 
 ?>
+<br/>
+<a href = "classPage.php">Back</a>
+
 
 </body>
 </html>

@@ -17,6 +17,8 @@
  $FizzBuzz->get($limit);
 
 ?>
+<br/>
+<a href = "classPage.php">Back</a>
 
 </body>
 </html>

@@ -1,11 +1,13 @@
-<?php
+
+ <?php
  include_once 'index.php';
+
+ $fnQuery = $_POST['fnQuery'];
  
- $lnQuery = $_POST['lnQuery'];
-		
-		$query = "SELECT * FROM customers WHERE last_name LIKE '$lnQuery'";
+		$query = "SELECT * FROM customers WHERE first_name LIKE '$fnQuery'";
 		$stmt = $db->prepare($query);
 		$stmt->execute();
+		
 		if($stmt->rowCount()>0)
 		{
 			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
